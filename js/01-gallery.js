@@ -6,7 +6,6 @@ const picturesMarkup = creatPictureCardsMarkup(galleryItems);
 
 pictureContainer.insertAdjacentHTML('beforeend', picturesMarkup);
 pictureContainer.addEventListener('click', onPictureClick);
-pictureContainer.addEventListener('keydown', onPictureClose);
 
 
 function creatPictureCardsMarkup(galleryItems) {
@@ -39,15 +38,12 @@ function creatPictureCardsMarkup(galleryItems) {
       const instance = basicLightbox.create(`
    <img src="${currentImage.original}" alt="${currentImage.description}">
    `);
-  
+    
     instance.show();
+    
 };
 
-function onPictureClose(e) {
-  if (e.key = 'Enter') {
-    instance.close();
-  }
-};
+
 
   
 
